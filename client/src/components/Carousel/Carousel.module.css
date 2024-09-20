@@ -1,0 +1,25 @@
+.carousel_cell {
+    width: 50vw;
+    height: 30vw;
+    /* height: 200px; */
+    margin-right: 10px;
+    background: rgb(115, 33, 191);
+    border-radius: 5px;
+  }
+  
+  .carousel {
+    /* background: #EEE; */
+    padding: 5px;
+    /* margin-bottom: 50px; */
+  }
+
+  .carousel img{
+    width: 50vw;
+    height: 30vw;
+  }
+
+
+  .link_no_underline {
+    text-decoration: none;
+    color: inherit; /* Adjust this if you need a specific color */
+  }

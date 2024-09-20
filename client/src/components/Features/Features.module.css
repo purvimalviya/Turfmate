@@ -1,0 +1,134 @@
+.feature_section{
+    margin: 0 auto;
+    background-color: rgb(5, 5, 5);
+    width: 80%;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.marq_container{
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marq_text{
+    color: rgba(255, 255, 255, 0.679);
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.35vw;
+    font-size: 1.25vw;
+    padding-left: 50%;
+    display: inline-block;
+    animation: marq 80s linear infinite;
+}
+
+@keyframes marq{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.title{
+    margin: 0;
+    margin-top: 50px;
+    padding-top: 3vw;
+    padding-bottom: 4vw;
+    color: white;
+
+    font-family: "Unbounded", sans-serif;
+    font-size: 3vw;
+    letter-spacing: 0.2vw;
+    font-weight: 500;
+}
+
+.feature_circles{
+    display: flex;
+    justify-content: space-around;
+}
+
+.circle{
+    width: 14vw;
+    height: 14vw;
+    padding: 2vw;
+    margin-bottom: 5vw;
+    
+    border-radius: 100vw;
+    background-color: rgb(75, 121, 81);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 700;
+    letter-spacing: 0.35vw;
+
+    text-align: center;
+}
+
+.circle:hover{
+    width: 18vw;
+    height: 18vw;
+
+    margin-bottom: 1vw;
+
+    
+}
+
+.circle:nth-child(1){
+    background-color: blueviolet;
+}
+
+.circle:nth-child(2){
+    background-color: red;
+}
+
+.circle:nth-child(3){
+    background-color: green;
+}
+
+.circle:nth-child(4){
+    background-color: blue;
+}
+
+
+/* ABOUT SECTION */
+
+.about_squares{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5vw;
+    row-gap: 2.25vw;
+    /* align-content: center; */
+}
+
+.square{
+    width: 38vw;
+    height: 38vw;
+}
+
+.square img{
+    width: 38vw;
+    height: 38vw;
+}
+
+.square:nth-child(1){
+    border: solid 2px white;
+}
+
+.square:nth-child(4){
+    border: none;
+}
+
+.square:nth-child(3){
+    background-color: rgb(255, 255, 255);
+}
+
+.square:nth-child(2){
+    background-color: rgb(255, 0, 0);
+}

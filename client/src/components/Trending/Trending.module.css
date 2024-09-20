@@ -1,0 +1,68 @@
+.trending_section{
+    background-color: rgb(230, 230, 230);
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tournaments, .popular_turfs{
+    width: 80%;
+    margin: 0 auto;
+
+    padding-bottom: 5vw;
+}
+
+.title{
+    margin: 0;
+    margin-top: 50px;
+    padding-top: 4vw;
+    padding-bottom: 3vw;
+    color: rgb(5, 5, 5);
+
+    font-family: "Unbounded", sans-serif;
+    font-size: 3vw;
+    letter-spacing: 0.1vw;
+    font-weight: 500;
+}
+
+.popular_turfs .title{
+    border-bottom: 0.5vw solid green;
+}
+
+.subtitle{
+    margin: 0;
+    /* margin-top: 50px; */
+    margin-top: -3vw;
+    padding-bottom: 3vw;
+    color: rgb(47, 131, 51);
+
+    /* font-family: "Unbounded", sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75vw;
+    letter-spacing: 0.3vw;
+    font-weight: 550;
+    /* background-color: aqua; */
+}
+
+
+.box{
+    /* border: solid 1px black; */
+    /* height: 40vw; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item{
+    /* width: 500px;
+    height: 900px; */
+    width: 25vw;
+    height: 32vw;
+    margin-bottom: 2vw;
+    background-color: rgb(187, 187, 187);
+}
+
+a{
+    text-decoration: none;
+}
+/* https://codepen.io/wizxvibing/details/XWwwqgG */

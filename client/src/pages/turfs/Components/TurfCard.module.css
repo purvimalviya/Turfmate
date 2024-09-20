@@ -1,0 +1,93 @@
+.card {
+    width: 20vw; /* Increased width for a larger card */
+    background: #f5f4f4;
+    padding: 2vw;
+    border-radius: 1.75vw; /* Slightly increased border radius for a smoother look */
+    box-shadow: 10px 10px 20px #c4c4c4, 
+                -10px -10px 20px #ffffff; /* Adjusted box shadow for a raised effect */
+    border: 1.5px solid rgb(0, 0, 0); /* Black border with opacity */
+    margin-bottom: 2vw;
+}
+  
+  .img_box {
+    width: 100%;
+    height: 12vw; /* Increased height for better image display */
+    overflow: hidden;
+    border-radius: 1.25vw; /* Matched border radius with card */
+    margin-bottom: 0.5vw; /* Increased margin bottom for spacing */
+  }
+  
+  .img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.25vw; /* Matched border radius with card */
+  }
+  
+  .title {
+    font-family: "Unbounded", sans-serif;
+    font-size: 2vw; /* Increased font size for title */
+    color: #000;
+    /* background-color: pink; */
+    margin: 0;
+    margin-top: 1vw;
+  }
+  
+  .subtitle {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #434343; /* Adjusted subtitle color for contrast */
+    font-size: 1.5vw; /* Increased font size for subtitle */
+    /* background-color: yellow; */
+    margin: 0;
+  }
+  
+  .tags {
+    display: flex;
+    gap: 1vw; /* Reduced gap between tags for a tighter look */
+    margin-bottom: 1.75vw; /* Adjusted margin bottom for spacing */
+  }
+  
+  .tags p {
+    background-color: #abd0b0; /* Lighter background for tags */
+    padding: 0.5vw 1vw; /* Increased padding for tags */
+    border-radius: 5vw; /* Rounded corners for tags */
+    font-size: 1vw; /* Adjusted font size for tags */
+    color: #000000; /* Darker text color for tags */
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+  }
+  
+  .card button {
+    background-color: #f8f8f8;
+    border: none;
+    padding: 0.5vw 0.5vw; /* Increased padding for larger button */
+    font-size: 1vw; /* Increased font size for button text */
+    cursor: pointer;
+    border-radius: 0;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+    color: #0219eb;
+    position: relative;
+    width: 100%; /* Full width button */
+
+    font-family: "Unbounded", sans-serif;
+    text-align: center;
+
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.827); 
+  }
+  
+  .card button:hover {
+    background-color: #e7e5e5; /* Darkened background on hover */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.57); 
+     
+  }
+  
+  .card button::after {
+    content: "→"; /* Arrow character */
+    margin-left: 1vw; /* Space between text and arrow */
+    font-size: 2vw; /* Increased arrow size */
+    vertical-align: middle; /* Align arrow vertically */
+  }
+  
+

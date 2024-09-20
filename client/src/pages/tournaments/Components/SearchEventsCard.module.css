@@ -1,0 +1,70 @@
+.card {
+    display: flex; /* Use Flexbox layout */
+    align-items: center; /* Center items vertically */
+    width: 75vw; /* Increased width for a larger card */
+    background: #f5f4f4;
+    padding: 2vw;
+    border-radius: 1.75vw; /* Slightly increased border radius for a smoother look */
+    box-shadow: 10px 10px 20px #c4c4c4, 
+                -10px -10px 20px #c3a1a1; /* Adjusted box shadow for a raised effect */
+    border: 1.5px solid rgb(0, 0, 0); /* Black border with opacity */
+    margin-bottom: 2vw;
+    overflow: hidden; /* Ensure children don’t overflow */
+}
+search-form {
+    display: flex;
+    gap: 20vw;
+    align-items: center;
+  }
+
+  .card button {
+    background-color: #f8f8f8;
+    border: none;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding: 1vw 1vw; /* Increased padding for larger button */
+    font-size: 1vw; /* Increased font size for button text */
+    cursor: pointer;
+    border-radius: 0;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+    color: #0219eb;
+    position: relative;
+    width: 20vw; /* Adjusted width for button */
+    font-family: "Unbounded", sans-serif;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.827);
+    margin-top: 1vw; /* Space between text and button */
+   
+  }
+  .card button:hover {
+    background-color: #e7e5e5; /* Darkened background on hover */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.57);
+}
+
+.dropdown {
+    background-color: #f8f8f8;
+    border: none;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding: 1vw 1vw; /* Increased padding for larger button */
+    font-size: 1vw; /* Increased font size for button text */
+    cursor: pointer;
+    border-radius: 0;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+    color: #0219eb;
+    position: relative;
+    width: 20vw; /* Adjusted width for button */
+    font-family: "Unbounded", sans-serif;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.827);
+    margin-top: 1vw; /* Space between text and button */
+
+    
+  }
+  
+.dropdown :hover {
+    background-color: #e7e5e5; /* Darkened background on hover */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.57);
+}

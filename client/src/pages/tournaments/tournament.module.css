@@ -1,0 +1,110 @@
+.tournamnets{
+    margin: 0 auto;
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title{
+    margin: 0;
+    margin-top: 50px;
+    padding-top: 3vw;
+    padding-bottom: 4vw;
+    color: white;
+
+    font-family: "Unbounded", sans-serif;
+    font-size: 3vw;
+    letter-spacing: 0.2vw;
+    font-weight: 500;
+}
+.feature_circles{
+    display: flex;
+    justify-content: space-around;
+}
+.circle{
+    width: 14vw;
+    height: 14vw;
+    padding: 2vw;
+    margin-bottom: 5vw;
+    
+    border-radius: 100vw;
+    background-color: rgb(75, 121, 81);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 700;
+    letter-spacing: 0.35vw;
+
+    text-align: center;
+}
+
+.circle:hover{
+    width: 18vw;
+    height: 18vw;
+
+    margin-bottom: 1vw;
+
+    
+}
+
+.circle:nth-child(1){
+    background-color: blueviolet;
+}
+
+.circle:nth-child(2){
+    background-color: red;
+}
+
+.circle:nth-child(3){
+    background-color: green;
+}
+
+.circle:nth-child(4){
+    background-color: blue;
+}
+
+.bookTurfsBG{
+    border-top: 5.5rem solid #000000;
+    background-color: rgb(230, 230, 230);
+    width: 100%;
+}
+.bookTurfs{
+  
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 5vw;
+}
+.nearbyTurfs .title2{
+    border-bottom: 0.5vw solid green;
+}
+.bookTurfs .title2{
+    border-bottom: 0.5vw solid green;
+}
+.title2{
+    margin: 0;
+    margin-top: 50px;
+    padding-top: 4vw;
+    padding-bottom: 3vw;
+    color: rgb(5, 5, 5);
+
+    font-family: "Unbounded", sans-serif;
+    font-size: 3vw;
+    letter-spacing: 0.1vw;
+    font-weight: 500;
+}
+.subtitle{
+    margin: 0;
+    /* margin-top: 50px; */
+    margin-top: -3vw;
+    padding-bottom: 3vw;
+    color: rgb(47, 131, 51);
+
+    /* font-family: "Unbounded", sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75vw;
+    letter-spacing: 0.3vw;
+    font-weight: 550;
+    /* background-color: aqua; */
+}
