@@ -1,0 +1,282 @@
+/* TeamFormation.module.css */
+
+.buildpage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    /* background-color: #f4f5f7; */
+    background-color: rgb(230, 230, 230);
+    min-height: 100vh;
+}
+
+.buildflex{
+    display: flex;
+    flex-direction: row;
+}
+
+.formContainer {
+    /* background-color: #fff; */
+    /* background: #f8f8f8; */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+    background-color: rgba(255, 255, 255, 0.753);
+    box-shadow: 10px 10px 20px #c4c4c4, 
+    -10px -10px 20px #f8f8f8; 
+    /* box-shadow: 0 4px 12px rgba(177, 159, 159, 0.377); */
+    border-radius: 2vw;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: fit-content;
+    margin: 2vw 2vw;
+    transition: transform 0.3s ease-in-out;
+}
+
+.reqpost{
+    /* background-color: #fff; */
+    /* box-shadow: 0 4px 12px rgba(177, 159, 159, 0.1); */
+    /* box-shadow: 10px 10px 20px #c4c4c4, 
+    -10px -10px 20px #d7d7d7; */
+    background-color: rgba(255, 255, 255, 0.753);
+    box-shadow: 10px 10px 20px #c4c4c4, 
+    -10px -10px 20px #f8f8f8; 
+    border-radius: 2vw;
+    padding: 1vw 2vw;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 2vw 2vw;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* .reqpost div{ */
+.teamCard{
+    background-color: #edecf1;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+    border-radius: 0.5vw;
+    padding: 1vw 2vw;
+    width: 85%;
+
+    border-radius: 3px;
+    border: #a1a1a1b5 solid 0.1vw;
+    transition: background-color 0.3s ease;
+    position: relative;
+  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.25vw; /* Increased font size for subtitle */
+  
+    /* text-align: center; */
+    letter-spacing: 1px;
+    margin: 2vw auto;
+    /* margin-bottom: 2vw; */
+    position: relative;
+}
+
+.formHeading {
+    /* text-align: center; */
+    margin-bottom: 20px;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: rgb(43, 43, 43);
+    display: block;
+    margin-bottom: 0.7vw;
+}
+
+.input,
+.textarea,
+.select {
+    width: 90%;
+    padding: 0.75vw 1vw;
+    background-color: rgba(246, 246, 246, 0.502);
+
+    border: 1px solid #b8b8b8;
+    border-radius: 2vw;
+    font-size: 1vw;
+}
+
+.select{
+    width: 96%;
+}
+
+.textarea {
+    resize:none;
+}
+
+.submitButton {
+    background-color: #131313; 
+    /* background-color: #f8f8f8; */
+    border: none;
+    padding: 0.9vw 0.5vw; /* Increased padding for larger button */
+    font-size: 1vw; /* Increased font size for button text */
+    cursor: pointer;
+    border-radius: 25px;
+    /* border: 2px solid black; */
+    transition: all 0.3s ease;
+    color: #e8e8e8;
+    position: relative;
+    width: 97%; /* Full width button */
+  
+    font-family: "Unbounded", sans-serif;
+    text-align: center;
+  
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.57); 
+    margin-top: 1vw;
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}
+
+/* Team requirements section */
+.teamRequirementsHeading, .postedRequirementsHeading {
+    text-align: left;
+    margin-top: 1.5vw;
+    margin-bottom: 1vw;
+    margin-left: 1.6vw;
+
+    font-size: 2.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #1b1b1b;
+    /* letter-spacing: 0.05vw; */
+}
+
+/* .teamCard {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+} */
+
+.teamCard:hover {
+    transform: translateY(-5px);
+}
+
+.cardHeading {
+    font-size: 2vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1vw;
+    margin: 0;
+    margin-top: 0.75vw;
+    /* opacity: 0.5; */
+}
+
+.cardsport{
+    font-size: 0.75vw;
+    border-radius: 1vw;
+    padding: 0.2vw 0.5vw;
+    color: white;
+    background-color: #218838;
+    width: fit-content;
+}
+
+.cardcity img{
+    width: 1.75vw;
+    margin-bottom: -0.55vw;
+    opacity: 0.75;
+    margin-right: 0.5vw;
+  }
+  
+.cardcity {
+     /* font-family: Arial, Helvetica, sans-serif; */
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-weight: 500;
+     font-size: 1.2vw;
+     color: rgb(59, 59, 59);
+     margin-top: 0.5vw;
+     margin-bottom: 1.75vw;
+  }
+
+.cardInfo {
+    margin: 0 ;
+    margin-bottom: 0.3vw;
+    font-size: 1vw;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    /* line-height: 1.4; */
+}
+
+.requestButton {
+    background-color: #131313; 
+    /* background-color: #f8f8f8; */
+    border: none;
+    padding: 0.9vw 0.5vw; /* Increased padding for larger button */
+    font-size: 1vw; /* Increased font size for button text */
+    cursor: pointer;
+    border-radius: 5px;
+    /* border: 2px solid black; */
+    transition: all 0.3s ease;
+    color: #e8e8e8;
+    position: relative;
+    width: 15vw; /* Full width button */
+  
+    font-family: "Unbounded", sans-serif;
+    text-align: center;
+  
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.57); 
+    margin: 0.5vw 0;
+    position: absolute;
+
+    bottom: 1vw;
+    right: 1.5vw;
+}
+
+.requestButton:hover {
+    background-color: #218838;
+}
+
+/* -------- */
+
+.postedRequirements{
+    /* background-color: #fff;
+    box-shadow: 0 4px 12px rgba(177, 159, 159, 0.377); */
+    background-color: rgba(255, 255, 255, 0.753);
+    box-shadow: 10px 10px 20px #c4c4c4, 
+    -10px -10px 20px #f8f8f8; 
+    border-radius: 2vw;
+    padding: 1vw 2vw;
+    display: flex;
+    flex-direction: column;
+    width: 88vw;
+    margin: 2vw 2vw;
+    transition: transform 0.3s ease-in-out;
+}
+
+.postedRequirementsHeading{
+    margin-left: 4.75vw;
+    font-size: 2.5vw;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px rgb(167, 167, 167) solid ;
+}
+
+.header div:nth-child(2){
+    text-align: right;
+}
+
+.header .cardcity{
+    margin-bottom: 0.75vw;
+}
+
+.requestersContainer p{
+    font-family: 'Unbounded';
+    font-size: 1vw;
+    color: #218838;
+}

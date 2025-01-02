@@ -1,43 +1,42 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import classes from './turf.module.css'
-import TurfCard from './Components/TurfCard'
-import TurfCard2 from './Components/TurfCard2'
+import TurfCardHorizontal from './Components/TurfCardHorizontal'
 import SearchTurfCard from './Components/SearchTurfCard'
-import Carousel from '../../components/Carousel/Carousel'
+
+import t1 from '../../assets/t1.jpg'
+import t2 from '../../assets/t2.jpg'
+import t3 from '../../assets/t3.jpeg'
+import t4 from '../../assets/t4.jpeg'
+import t5 from '../../assets/t5.jpeg'
+import t6 from '../../assets/t6.jpeg'
 
  function Turfs() {
+
+  const [turfs, setTurfs] = useState([]);
+  const imgarr = [t1,t2,t3,t4,t5,t6];
+
   return (
     <div className={classes.turfs}>
 
-        {/* <div className={classes.nearbyTurfs}>
-        <h2 className={classes.title}>Nearby Turfs</h2>
-        <h3 className={classes.subtitle}>in your city</h3>
-
-            <div className={classes.box}>
-            <TurfCard/>
-            <TurfCard/>
-            <TurfCard/>
-            </div>
-        </div> */}
-
-        {/* <div className={classes.nearbyTurfs}>
-            <h2 className={classes.title}>CURRENT OFFERS</h2>
-            <Carousel/>
-        </div> */}
-
         <div className={classes.bookTurfs}>
-        <h2 className={classes.title}>Book Turfs</h2>
-        <h3 className={classes.subtitle}>in your city</h3>
-           <SearchTurfCard/>
-            <TurfCard2 />
-            <TurfCard2 />
-            <TurfCard2 />
-            <TurfCard2 />
-        </div>
+            <h2 className={classes.title}>Book Turfs</h2>
+            <h3 className={classes.subtitle}>in your city</h3>
 
-    {/* <div className={classes.nearbyTurfs}>
-        <h2 className={classes.title}>Tournaments</h2>
-    </div> */}
+             {/* Pass setTurfs as a prop to SearchTurfCard */}
+            <SearchTurfCard setTurfs={setTurfs} />
+
+            {/* Map the turfs array to display the results */}
+            <div className={classes.turfResults}>
+            {turfs.length > 0 ? (
+                turfs.map((turf, index) => (
+                    // Pass the corresponding image from imgarr using the index
+                    <TurfCardHorizontal key={turf._id} turf={turf} image={imgarr[index % imgarr.length]} />
+                ))
+                ) : (
+                <p>No turfs found</p>
+                )}
+            </div>
+        </div>
     
     </div>
   )

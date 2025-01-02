@@ -1,10 +1,30 @@
 const Turf = require('../models/Turf');
+const City = require('../models/City');
+const Sport = require('../models/Sport');
+
+const getCitiesAndSports = async (req, res) => {
+    try {
+        const cities = await City.find();
+
+        const sports = await Sport.find();
+
+        const cityNames = cities.map(city => city.name);
+        const sportNames = sports.map(sport => sport.name);
+
+        console.log(cityNames);
+        console.log(sportNames);
+
+        res.json({ cityNames, sportNames });
+    } catch (error) {
+        console.error(error); 
+        res.status(500).json({ message: 'Server Error' });
+    }
+};
 
 const getTurfs = async (req, res) => {
     try {
         const { city, sport, name } = req.query;
 
-        // Build the search query
         let query = {};
 
         if (city) {
@@ -13,7 +33,6 @@ const getTurfs = async (req, res) => {
         }
 
         if (sport) {
-            // Match the sport in the allsports array
             query.allsports = sport;
             // query.allsports = { $regex: sport, $options: 'i' };
         }
@@ -55,11 +74,11 @@ const getTurfAvails = async (req, res) => {
 
         // Generate an array of 14 days starting from today
         //right now only 3 days i'm taking
-        const maxdays = 3;
-        const timeSlots = [
-            '1000-1100', '1100-1200', '1200-1300', '1300-1400',
-            '1400-1500', '1500-1600', '1600-1700', '1700-1800'
-        ]; // Time slots from 10 AM to 6 PM
+        const maxdays = 7;
+        // const timeSlots = [
+        //     '1000-1100', '1100-1200', '1200-1300', '1300-1400',
+        //     '1400-1500', '1500-1600', '1600-1700', '1700-1800'
+        // ]; // Time slots from 10 AM to 6 PM
         const availabilityData = {};
 
         const startDate = new Date();
@@ -80,7 +99,8 @@ const getTurfAvails = async (req, res) => {
             // console.log(date);
 
             const day = date.toLocaleDateString('en-US', { weekday: 'long', timeZone: 'Asia/Kolkata' });
-            // console.log(day);
+            const timeSlots = turf.slots[day] || [];
+            console.log(timeSlots);
 
             const dateString = localDate.toISOString().split('T')[0]; // Format: YYYY-MM-DD
 
@@ -102,7 +122,7 @@ const getTurfAvails = async (req, res) => {
 
         res.json(availabilityData); // Send the nested object with dates and time slots
     } catch (error) {
-        console.error(error); // Log the error for debugging
+        console.error(error); 
         res.status(500).json({ message: 'Server Error' });
     }
 };
@@ -155,6 +175,7 @@ module.exports = {
     getTurfs,
     getTurfDet,
     getTurfAvails,
+    getCitiesAndSports
     // bookTurfAvail,
 }
 

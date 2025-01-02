@@ -1,11 +1,3 @@
-// const mongoose = require('mongoose');
-
-// const turfSchema = new mongoose.Schema({});
-
-// const Turf = mongoose.model('turf', turfSchema);
-
-// module.exports = Turf;
-
 const mongoose = require('mongoose');
 
 const turfSchema = new mongoose.Schema({
@@ -46,16 +38,16 @@ const turfSchema = new mongoose.Schema({
     sports: { type: [String] }  // Array of sports
   }],
   slots: {
-    Monday: { type: [String] },  // Array of time slots for each day
+    Monday: { type: [String] },  // Array of time slots for each day (ie. 1100-1200, 1200-1300)
     Tuesday: { type: [String] },
     Wednesday: { type: [String] },
     Thursday: { type: [String] },
     Friday: { type: [String] },
     Saturday: { type: [String] },
     Sunday: { type: [String] }
-  }
+  },
+  average_price: { type: Number }  // New field for average price
 }, { collection: 'turves' });
-// });
 
 const Turf = mongoose.model('Turf', turfSchema);
 

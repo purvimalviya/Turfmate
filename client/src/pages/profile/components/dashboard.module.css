@@ -1,0 +1,150 @@
+.dashContainer{
+    width: 70vw;
+    /* height: 40vw; */
+    border: white solid 1px;
+    margin: 2vw;
+    border-radius: 1vw;
+    /* margin-top: 5vw; */
+}
+
+
+/* _________________________________ */
+
+.buildflex{
+    display: flex;
+    /* flex-direction: column; */
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.formContainer {
+    background-color: rgba(255, 255, 255, 0.865);
+    border-radius: 1.5vw;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: fit-content;
+    margin: 2vw 2vw;
+    transition: transform 0.3s ease-in-out;
+}
+
+.label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: rgb(43, 43, 43);
+    display: block;
+    margin-bottom: 0.7vw;
+}
+
+.labelch{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-weight: 700; */
+    color: rgb(43, 43, 43);
+    display: inline-block;
+    margin-bottom: 1.25vw;
+    margin-right: 1vw;
+}
+
+.input,
+.textarea,
+.select {
+    width: 90%;
+    padding: 0.75vw 1vw;
+    background-color: rgba(246, 246, 246, 0.502);
+
+    border: 1px solid #b8b8b8;
+    border-radius: 2vw;
+    font-size: 1vw;
+}
+
+.select{
+    width: 96%;
+}
+
+
+.submitButton {
+    background-color: #131313; 
+    /* background-color: #f8f8f8; */
+    border: none;
+    padding: 0.9vw 0.5vw; /* Increased padding for larger button */
+    font-size: 1vw; /* Increased font size for button text */
+    cursor: pointer;
+    border-radius: 25px;
+    /* border: 2px solid black; */
+    transition: all 0.3s ease;
+    color: #e8e8e8;
+    position: relative;
+    width: 97%; /* Full width button */
+  
+    font-family: "Unbounded", sans-serif;
+    text-align: center;
+  
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.57); 
+    margin-top: 1vw;
+}
+
+.addButton{
+    margin-top: 1vw;
+    margin-bottom: 1.25vw;
+    border: 0;
+    text-decoration: none;
+    padding: 0.5vw 0.8vw;
+    background-color: #09090916;
+}
+
+.bookings {
+    height: 41vw; /* Fixed height for the scrollable area */
+    overflow-y: scroll; /* Makes the div scrollable */
+    scrollbar-width: none;
+    border: 2px solid #ccc;
+    border-radius: 1.5vw;
+    width: 25vw;
+    padding: 2vw;
+    margin: 2vw 2vw 0 0;
+  }
+  
+.bookings h3{
+    font-size: 1.5vw;
+    padding: 0;
+    margin: 0;
+    color: #111111;
+    background-color: rgb(38, 223, 38);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.2vw;
+    margin-bottom: 2vw;
+    padding: 0.5vw 2.5vw;
+    width: fit-content;
+    /* border: 1px solid white; */
+    border-radius: 3vw;
+}
+  .box {
+    padding: 1vw;
+    margin-bottom: 2vw;
+    /* border: 0.1px solid #cccccc30; */
+    background-color: #090909;
+    border-radius: 1vw;
+    color: #ccc;
+  }
+
+  .box p{
+    font-size: 1vw;
+    font-family: "Unbounded";
+    padding: 0.25vw 0;
+    margin: 0;
+    letter-spacing: 0.1vw;
+    font-weight: 200;
+  }
+
+.strong{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1vw;
+}
+
+.lineplot img{
+    width: 55vw;
+    border-radius: 2vw;
+    opacity: 0.85;
+    margin: 2vw 2vw;
+}

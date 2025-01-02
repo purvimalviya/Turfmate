@@ -6,21 +6,24 @@
     padding: 2vw;
     border-radius: 1.75vw; /* Slightly increased border radius for a smoother look */
     box-shadow: 10px 10px 20px #c4c4c4, 
-                -10px -10px 20px #c3a1a1; /* Adjusted box shadow for a raised effect */
-    border: 1.5px solid rgb(0, 0, 0); /* Black border with opacity */
+                -10px -10px 20px #c4c8c5; /* Adjusted box shadow for a raised effect */
+    /* border: 1.5px solid rgb(0, 0, 0);  */
     margin-bottom: 2vw;
     overflow: hidden; /* Ensure children don’t overflow */
 }
 
 
-.search-form {
+.searchForm {
+    width: 100%;
+    /* background-color: pink; */
     display: flex;
-    gap: 20vw;
+    /* gap: 5vw; */
     align-items: center;
+    justify-content: space-between;
   }
 
   .dropdown {
-    margin-left: 2vw;
+    margin-left: 1vw;
     margin-right: 2vw;
     padding: 0.5vw;
     font-size: 1vw;
@@ -30,34 +33,19 @@
     background-color: #fff;
   }
 
-  .card button {
-    background-color: #f8f8f8;
-    border: none;
-    padding: 0.5vw 1vw; /* Increased padding for larger button */
-    font-size: 1vw; /* Increased font size for button text */
-    cursor: pointer;
-    border-radius: 0;
-    border: 2px solid black;
-    transition: all 0.3s ease;
-    color: #0219eb;
-    position: relative;
-    width: 20vw; /* Adjusted width for button */
-    font-family: "Unbounded", sans-serif;
-    text-align: center;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.827);
-    margin-top: 1vw; /* Space between text and button */
-   
+  .inputBox{
+    margin-right: 1vw;
+    border-radius: 2vw;
+    border: 1px solid #818181;
+    background-color: #fff;
+    padding: 0.5vw;
+    padding-left: 1vw;
+    font-size: 1vw;
   }
-  .card button:hover {
-    background-color: #e7e5e5; /* Darkened background on hover */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.57);
-}
 
-.card button::after {
-    content: "→"; /* Arrow character */
-    margin-left: 1vw; /* Space between text and arrow */
-    font-size: 2vw; /* Increased arrow size */
-    vertical-align: middle; /* Align arrow vertically */
-}
-
-
+  .label{
+    font-size: 1.1vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: #818181;
+  }

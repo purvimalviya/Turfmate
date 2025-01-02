@@ -25,7 +25,7 @@ export default function Navbar() {
           Turfs
         </NavLink>
         <NavLink
-          to="/team"
+          to="/teams"
           className={({ isActive }) =>
             isActive ? `${classes.nav_link} ${classes.active}` : classes.nav_link
           }

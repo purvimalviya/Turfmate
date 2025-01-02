@@ -1,38 +1,72 @@
 const Turf = require('../models/Turf');
+const Owner = require('../models/Owner');
 const Booking = require('../models/Booking');
 
-const addNewTurf = async (req, res) => {
-    // try {
-    //     const turfData = req.body; // Get turf data from request body
-    
-    //     // Create a new turf entry
-    //     const newTurf = new Turf(turfData);
-    //     await newTurf.save();
-    
-    //     return res.status(201).json({ message: 'Turf added successfully', turf: newTurf });
-    //   } catch (error) {
-    //     console.error('Error adding turf:', error);
-    //     return res.status(500).json({ message: 'Server Error' });
-    //   }
+// const addNewTurf = async (req, res) => {
 
+//     const {
+//         name, description, allsports, location, features, rating,
+//         contact_info, images, availability, city, price_per_sport,
+//         grounds, slots
+//     } = req.body;
+
+//     if (!name) {
+//         return res.status(400).json({ message: 'Name is required' });
+//     }
+//     else{
+//         const existingTurf = await Turf.findOne({ name });
+
+//         if (existingTurf) {
+//             return res.status(400).json({ message: 'Turf with this name already exists' });
+//         }
+//     }
+
+//     try {
+//         const newTurf = new Turf({
+//             name,
+//             description,
+//             allsports,
+//             location,
+//             features,
+//             rating,
+//             contact_info,
+//             images,
+//             availability,
+//             city,
+//             price_per_sport,
+//             grounds,
+//             slots
+//         });
+
+//         const savedTurf = await newTurf.save();
+//         return res.json({ message: 'Turf added successfully', turf: savedTurf });
+//     } catch (error) {
+//         console.error('Error adding turf:', error);
+//         return res.status(500).json({ message: 'Error adding turf' });
+//     }
+
+// }
+
+const addNewTurf = async (req, res) => {
     const {
         name, description, allsports, location, features, rating,
         contact_info, images, availability, city, price_per_sport,
-        grounds, slots
+        grounds, slots, average_price, ownerId  // Add ownerId to link the turf with the owner
     } = req.body;
 
+    // Check if the name field is provided
     if (!name) {
         return res.status(400).json({ message: 'Name is required' });
     }
-    else{
-        const existingTurf = await Turf.findOne({ name });
 
-        if (existingTurf) {
-            return res.status(400).json({ message: 'Turf with this name already exists' });
-        }
+    // Check if a turf with the same name already exists
+    const existingTurf = await Turf.findOne({ name });
+    if (existingTurf) {
+        return res.status(400).json({ message: 'Turf with this name already exists' });
     }
 
     try {
+        // Create a new turf instance
         const newTurf = new Turf({
             name,
             description,
@@ -46,17 +80,30 @@ const addNewTurf = async (req, res) => {
             city,
             price_per_sport,
             grounds,
-            slots
+            slots,
+            average_price  // Assuming average price is calculated
         });
 
+        // Save the new turf to the database
         const savedTurf = await newTurf.save();
+
+        // Add the saved turf's ID to the owner's list of turfs
+        const owner = await Owner.findById(ownerId);
+        if (!owner) {
+            return res.status(404).json({ message: 'Owner not found' });
+        }
+
+        owner.turfs = owner.turfs || [];  // Ensure turfs array exists
+        owner.turfs.push(savedTurf._id);  // Add the new turf's ID to the owner's turfs array
+        await owner.save();  // Save the updated owner document
+
+        // Return success response with the saved turf
         return res.json({ message: 'Turf added successfully', turf: savedTurf });
     } catch (error) {
         console.error('Error adding turf:', error);
         return res.status(500).json({ message: 'Error adding turf' });
     }
-
-}
+};
 
 // const editTurf = async (req, res) => {
 //     const {turfId} = req.query;

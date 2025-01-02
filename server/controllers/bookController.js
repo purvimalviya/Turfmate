@@ -5,9 +5,11 @@ const Booking = require('../models/Booking');
 const bookTurfAvail = async (req, res) => {
     try {
       const { turfId, clientName, date, timeSlot, sport, price } = req.body;
-      
+      // const { name, clientName, date, timeSlot, sport, price } = req.body;
+
       // Find the turf by id
       const turf = await Turf.findById(turfId);
+      // const turf = await Turf.findOne({ name: name });
 
       if (!turf) {
         return res.status(404).json({ message: 'Turf not found' });

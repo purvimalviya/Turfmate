@@ -1,110 +1,141 @@
-.tournamnets{
-    margin: 0 auto;
-    width: 80%;
-    font-family: Arial, Helvetica, sans-serif;
+/* Tournament.module.css */
+.tournamentPage{
+    margin: 0 ;
+    background-color: #0c0c0c;  /* Background color matching the ChatGPT screen */
 }
-.title{
+
+.tournamentContainer {
+    /* max-width: 90vw; */
     margin: 0;
-    margin-top: 50px;
-    padding-top: 3vw;
-    padding-bottom: 4vw;
-    color: white;
+    padding: 0 5vw;
 
-    font-family: "Unbounded", sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75vw;
+    justify-content: space-between;
+}
+
+.pageHeading {
+    text-align: right;
     font-size: 3vw;
-    letter-spacing: 0.2vw;
-    font-weight: 500;
-}
-.feature_circles{
-    display: flex;
-    justify-content: space-around;
-}
-.circle{
-    width: 14vw;
-    height: 14vw;
-    padding: 2vw;
-    margin-bottom: 5vw;
-    
-    border-radius: 100vw;
-    background-color: rgb(75, 121, 81);
+    margin:0;
+    /* margin-top: 6vw; */
+    padding: 2.5vw 0;
+    padding-top: 5vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vw;
+    color: #f3f3f3;
+    font-family: 'Unbounded';
+    font-weight: 300;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-bottom: solid white 0.1vw;
+}
 
+.tournamentCard {
+    background-color: rgb(143, 255, 150);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 1vw 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tournamentCard:hover {
+    transform: translateY(-5px);
+}
+
+.header{
+    display: flex;
+}
+
+.header p{
+    background-color: #111111;
     color: white;
-    font-size: 1.5vw;
-    font-weight: 700;
-    letter-spacing: 0.35vw;
-
-    text-align: center;
+    font-family: 'Unbounded';
+    height: fit-content;
+    padding: 0.5vw 1vw;
+    border-radius: 3vw;
 }
 
-.circle:hover{
-    width: 18vw;
-    height: 18vw;
-
-    margin-bottom: 1vw;
-
-    
+.tournamentHeading {
+    font-size: 2.5vw;
+    color: #111111;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
 }
 
-.circle:nth-child(1){
-    background-color: blueviolet;
-}
-
-.circle:nth-child(2){
-    background-color: red;
-}
-
-.circle:nth-child(3){
-    background-color: green;
-}
-
-.circle:nth-child(4){
-    background-color: blue;
-}
-
-.bookTurfsBG{
-    border-top: 5.5rem solid #000000;
-    background-color: rgb(230, 230, 230);
-    width: 100%;
-}
-.bookTurfs{
+.cardcity img{
+    width: 1.75vw;
+    margin-bottom: -0.55vw;
+    /* opacity: 0.75; */
+    margin-right: 0.5vw;
+  }
   
-    margin: 0 auto;
-    width: 80%;
-    padding-bottom: 5vw;
-}
-.nearbyTurfs .title2{
-    border-bottom: 0.5vw solid green;
-}
-.bookTurfs .title2{
-    border-bottom: 0.5vw solid green;
-}
-.title2{
-    margin: 0;
-    margin-top: 50px;
-    padding-top: 4vw;
-    padding-bottom: 3vw;
-    color: rgb(5, 5, 5);
+.cardcity {
+     /* font-family: Arial, Helvetica, sans-serif; */
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-weight: 500;
+     font-size: 1.2vw;
+     color: rgb(59, 59, 59);
+     margin-top: 0.5vw;
+     margin-bottom: 1.75vw;
+  }
 
-    font-family: "Unbounded", sans-serif;
-    font-size: 3vw;
-    letter-spacing: 0.1vw;
+.cardInfo {
+    margin: 0 ;
+    margin-bottom: 0.3vw;
+    font-size: 1vw;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #252525;
+    /* line-height: 1.4; */
+}
+
+.content{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 2vw;
+}
+.content{
+    font-size: 2.5vw;
     font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.subtitle{
-    margin: 0;
-    /* margin-top: 50px; */
-    margin-top: -3vw;
-    padding-bottom: 3vw;
-    color: rgb(47, 131, 51);
+.label{
+    font-size: 1vw;
+    text-transform: uppercase;
+    letter-spacing: 0.1vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* color: #f3f3f3; */
+    /* background-color: #111111; */
+    font-weight: 600;
+    padding: 0.1vw 0.4vw;
+    border: #0c0c0c solid 2px;
+}
 
-    /* font-family: "Unbounded", sans-serif; */
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.75vw;
-    letter-spacing: 0.3vw;
-    font-weight: 550;
-    /* background-color: aqua; */
+.contactDetails {
+    font-weight: bold;
+    background-color: #0c0c0cf6;
+    /* color: #353535; */
+    color: #f3f3f3;
+    padding: 1vw 1vw;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Unbounded';
+    font-weight: 300;
+    font-size: 1vw;
+    border-radius: 1vw;
+
+    box-shadow: 0 4px 12px rgba(22, 22, 22, 0.669); 
+
+}
+
+.contactDetails p{
+    padding: 0.25vw;
+    margin: 0;
 }

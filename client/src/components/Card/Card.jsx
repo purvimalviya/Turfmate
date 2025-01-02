@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './Card.module.css'
 import { Link } from 'react-router-dom'
+import SquareButton from '../SquareButton/SquareButton'
 
 export default function Card({thumbnail, city, turfName, sports, link}) {
   return (
@@ -17,10 +18,10 @@ export default function Card({thumbnail, city, turfName, sports, link}) {
         {sports.map((sport, index) => (
           <p key={index}>{sport}</p>
         ))}
-      </div>
+        </div>
 
-        {/* <button>MORE TURFS</button> */}
-        <button ><Link to={link}>MORE TURFS</Link></button>
+        <SquareButton link={link} text="MORE TURFS"></SquareButton>
+        {/* <button ><Link to={link}>MORE TURFS</Link></button> */}
 
     </div>
   )

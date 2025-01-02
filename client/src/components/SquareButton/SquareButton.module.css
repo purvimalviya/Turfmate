@@ -1,0 +1,39 @@
+
+.squarebutton {
+    background-color: #e7e5e5; 
+    /* background-color: #f8f8f8; */
+    border: none;
+    padding: 0.5vw 0.5vw; /* Increased padding for larger button */
+    font-size: 1vw; /* Increased font size for button text */
+    cursor: pointer;
+    border-radius: 25px;
+    /* border: 2px solid black; */
+    transition: all 0.3s ease;
+    color: #0219eb;
+    position: relative;
+    width: 100%; /* Full width button */
+
+    font-family: "Unbounded", sans-serif;
+    text-align: center;
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.57); 
+  }
+  
+.squarebutton:hover {
+    background-color: #d5d5d5; /* Darkened background on hover */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.57); 
+     
+  }
+  
+.squarebutton::after {
+    content: "→"; 
+    margin-left: 1vw; 
+    font-size: 2vw; 
+    vertical-align: middle; 
+  }
+  
+a{
+  text-decoration: none;
+  /* color: #0219eb; */
+  color: rgb(245, 245, 245);
+}
